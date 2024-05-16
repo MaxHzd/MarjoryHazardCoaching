@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+}
+
+.recettes-images {
+    height: 100px;
+    width: 200px;
+    padding: 10px;
+}
+
+.recettes-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  background-color: #94946a;
+}
+
+.recettes-nav a {
+  margin-left: 95px;
+}
+
+a:hover {
+    opacity: 50%;
+}
+
+.recettes ul {
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+}
+
+.recettes li {
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 996px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header nav img {
+        margin-bottom: 20px;
+      }
+    
+      header,
+      footer {
+        padding: 20px 20px;
+      }
+    
+      h1 {
+        font-size: 2em;
+      }
+    
+      section {
+        padding: 50px 20px 50px 20px;
+      }
+    
+      nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+}

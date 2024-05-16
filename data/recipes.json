@@ -1,0 +1,18 @@
+[
+    {
+        "id": "courgettesFarcies",
+        "title": "Courgettes farcies healthy",
+        "image": "C:/Max/Travail/Reconversion/projets_avant_formation/Marjory Coaching/images/Recettes/courgettes_healthy_mini.jpg",
+        "description": "Description de la recette 1...",
+        "ingredients": ["200 g de poulet", "1 oignon", "200 ml de sauce tomate", "1 gousse d'ail", "50 g de parmesan", "Epices chili"],
+        "instructions": "Instructions pour la recette 1..."
+    },
+    {
+        "id": "recette2",
+        "title": "Recette 2",
+        "image": "images/recette2.jpg",
+        "description": "Description de la recette 2...",
+        "ingredients": ["Ingrédient 1", "Ingrédient 2"],
+        "instructions": "Instructions pour la recette 2..."
+    }
+]
