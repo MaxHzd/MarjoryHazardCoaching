@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
             data.forEach(recipe => {
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
-                    <a href="recipes.html?id=${recipe.id}">
+                    <a href="recettes.html?id=${recipe.id}">
                         <img src="${recipe.image}" alt="${recipe.title}">
                         <h2>${recipe.title}</h2>
                     </a>
