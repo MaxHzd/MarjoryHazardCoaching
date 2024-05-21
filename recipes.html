@@ -6,11 +6,12 @@
     <title>Recettes - Marjory Hazard Coaching</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/recettes.css">
-    <script src="scripts/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="scripts/recipes-data.js"></script>
+    <script src="scripts/display-details.js"></script>
 </head>
 
 <body>
@@ -29,10 +30,30 @@
             <a href="trucs_astuces.html">Mes trucs et astuces</a>
         </nav>
         <h1>Mes recettes</h1>
-        <section class="recettes">
-            <div id="recipe-details"></div>
-        </section>
-
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const recipeId = localStorage.getItem('selectedRecipeId');
+                const recipe = recipes.find(r => r.id == recipeId);
+        
+                if (recipe) {
+                    const mainContainer = document.querySelector('main');
+                    mainContainer.innerHTML = `
+                        <h1>${recipe.title}</h1>
+                        <img src="${recipe.photo}" alt="${recipe.title}">
+                        <p>${recipe.description}</p>
+                        <h2>Ingrédients</h2>
+                        <ul>
+                            ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        </ul>
+                        <h2>Instructions</h2>
+                        <ol>
+                            ${recipe.instructions.map(instruction => `<li>${instruction}</li>`).join('')}
+                        </ol>
+                    `;
+                }
+            });
+        </script>
+        
     </main>
     <footer>
         <a target="blank" href="https://facebook.com" class="lien-icone">
@@ -45,7 +66,6 @@
             <img src="images\icone_linkedin.png" alt="Logo LinkedIn" title="LinkedIn" class="icone-footer">
         </a>
     </footer>
-    <script src="scripts\recipe.js"></script>
 </body>
 
 </html>

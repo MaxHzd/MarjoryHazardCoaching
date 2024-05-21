@@ -6,12 +6,12 @@
     <title>Liste des recettes - Marjory Hazard Coaching</title>
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/recettes.css">
-    <script src="scripts/recipe.js"></script>
-    <script src="scripts/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="scripts/recipes-data.js"></script>
+    <script src="scripts/display-previews.js"></script>
 </head>
 
 <body>
@@ -30,12 +30,26 @@
             <a href="trucs_astuces.html">Mes trucs et astuces</a>
         </nav>
         <h1>Mes recettes</h1>
-        <section class="recettes">
-                <ul id="recipe-list">
-
-                </ul>
-        </section>
-
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const recipesContainer = document.querySelector('.recettes-nav');
+        
+                recipes.forEach(recipe => {
+                    const recipeElement = document.createElement('div');
+                    recipeElement.classList.add('recipe-preview');
+                    recipeElement.innerHTML = `
+                        <img src="${recipe.photo}" alt="${recipe.title}">
+                        <h2>${recipe.title}</h2>
+                    `;
+                    recipeElement.addEventListener('click', () => {
+                        localStorage.setItem('selectedRecipeId', recipe.id);
+                        window.location.href = 'recipes.html';
+                    });
+                    recipesContainer.appendChild(recipeElement);
+                });
+            });
+        </script>
+        
     </main>
     <footer>
         <a target="blank" href="https://facebook.com" class="lien-icone">
@@ -48,7 +62,6 @@
             <img src="images\icone_linkedin.png" alt="Logo LinkedIn" title="LinkedIn" class="icone-footer">
         </a>
     </footer>
-    <script src="scripts\script.js"></script>
 </body>
 
 </html>

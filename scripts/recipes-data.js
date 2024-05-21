@@ -2,7 +2,7 @@ const recipes = [
     {
         id: 1,
         title: "Smoothie énergisant",
-        photo: "images\Recettes\courgettes_healthy_mini.jpg",
+        photo: "images/smoothie.jpg",
         description: "Un smoothie riche en vitamines pour bien commencer la journée.",
         ingredients: [
             "1 banane",
