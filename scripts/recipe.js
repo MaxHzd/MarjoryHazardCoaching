@@ -11,17 +11,17 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log("Found Recipe:", recipe);
 
             const recipeDetails = document.getElementById('recipe-details');
-            if (recipe) {
+            if (recipes) {
                 recipeDetails.innerHTML = `
-                    <h1>${recipe.title}</h1>
-                    <img src="${recipe.image}" alt="${recipe.title}">
-                    <p>${recipe.description}</p>
+                    <h1>${recipes.title}</h1>
+                    <img src="${recipes.image}" alt="${recipes.title}">
+                    <p>${recipes.description}</p>
                     <h3>Ingrédients</h3>
                     <ul>
-                        ${recipe.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
+                        ${recipes.ingredients.map(ingredient => `<li>${ingredient}</li>`).join('')}
                     </ul>
                     <h3>Instructions</h3>
-                    <p>${recipe.instructions}</p>
+                    <p>${recipes.instructions}</p>
                 `;
             } else {
                 recipeDetails.innerHTML = `<p>Recette non trouvée</p>`;

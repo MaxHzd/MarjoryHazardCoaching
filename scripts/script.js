@@ -3,12 +3,12 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(response => response.json())
         .then(data => {
             const recipeList = document.getElementById('recipe-list');
-            data.forEach(recipe => {
+            data.forEach(recipes => {
                 const listItem = document.createElement('li');
                 listItem.innerHTML = `
-                    <a href="recettes.html?id=${recipe.id}">
-                        <img src="${recipe.image}" alt="${recipe.title}">
-                        <h2>${recipe.title}</h2>
+                    <a href="recettes.html?id=${recipes.id}">
+                        <img src="${recipes.image}" alt="${recipes.title}">
+                        <h2>${recipes.title}</h2>
                     </a>
                 `;
                 recipeList.appendChild(listItem);
