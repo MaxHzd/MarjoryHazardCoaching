@@ -17,18 +17,20 @@
 <body>
     <header>
         <nav>
-            <div>
-                <img height="50px" width="50px" src="images\hts_logo.png" alt="logo HTS">
-                <a href="index.html">Accueil</a>
-                <a href="recipes.html">Mes idées recettes</a>
-            </div>
+            <img height="50px" width="50px" src="images\hts_logo.png" alt="logo HTS">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Alimentation</a>
+                    <div class="dropdown-content">
+                        <a href="mes-recettes.html">Mes recettes</a>
+                        <a href="trucs_astuces.html">Mes astuces</a>
+                    </div>
+                </li>
+            </ul>
         </nav>
     </header>
     <main>
-        <nav class="recettes-nav">
-            <a href="recipes.html">Mes idées de recettes</a>
-            <a href="trucs_astuces.html">Mes trucs et astuces</a>
-        </nav>
         <h1>Mes recettes</h1>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
