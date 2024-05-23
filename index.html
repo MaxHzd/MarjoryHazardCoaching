@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <title>Accueil - Marjory Hazard Coaching</title>
-    <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon_96x96.png"/>
 </head>
+
 <body>
     <header>
         <img height="50px" width="50px" src="images/hts_logo.png" alt="logo HTS">
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Alimentation</a>
-                    <div class="dropdown-content">
-                        <a href="recettes.html">Mes recettes</a>
-                        <a href="trucs_astuces.html">Mes astuces</a>
-                    </div>
+                <li class="menu-deroulant">
+                    <a href="#">Alimentation</a>
+                    <ul class="sous-menu">
+                    <li><a href="recettes.html">Mes idées de recettes</a></li>
+                    <li><a href="trucs_astuces.html">Mes astuces</a></li>
+                    </ul>
                 </li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#">À propos</a></li>
             </ul>
         </nav>
     </header>
@@ -34,14 +36,17 @@
             <div>
                 <h1>Marjory Hazard Coaching</h1>
                 <p>
-                    Où professionalisme s’allie avec passion. J’exerce mon métier avec la passion qui m’anime : vous aider à atteindre vos objectifs forme, bien-être et santé.
+                    Où professionalisme s’allie avec passion.<br>
+                    J’exerce mon métier avec la passion qui m’anime : vous aider à atteindre vos objectifs forme, bien-être et santé.<br>
                     Coach personnelle diplômée (BPJEPS AF), je vous accompagne dans vos objectifs de remise en forme, perte de poids, prise de masse
                     et bien plus encore.
                 </p>
                 <a href="#contact" class="cta">UN PROJET ? ÉCRIVEZ-MOI</a>
             </div>
-            <img height="20%" width="20%" src="images/marjory_photo.jpg" alt="Photo de Marjory" title="Marjory Hazard">
+            <img class="accueil-photo-mh" src="images/marjory_photo.jpg" alt="Photo de Marjory" title="Marjory Hazard">
         </section>
+        <br>
+            <img class="accueil-photo-salle" src="images\salle_muscu.jpg" alt="salle de musculation">
         <br>
         <section id="contact" class="section-contact">
             <h2>Parlons de votre projet</h2>
@@ -76,4 +81,5 @@
         </a>
     </footer>
 </body>
+
 </html>

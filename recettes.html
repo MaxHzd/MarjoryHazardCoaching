@@ -16,22 +16,39 @@
 
 <body>
     <header>
+        <img height="50px" width="50px" src="images/hts_logo.png" alt="logo HTS">
         <nav>
-            <img height="50px" width="50px" src="images\hts_logo.png" alt="logo HTS">
             <ul>
                 <li><a href="index.html">Accueil</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Alimentation</a>
-                    <div class="dropdown-content">
-                        <a href="mes-recettes.html">Mes recettes</a>
-                        <a href="trucs_astuces.html">Mes astuces</a>
-                    </div>
+                <li class="menu-deroulant">
+                    <a href="#">Alimentation</a>
+                    <ul class="sous-menu">
+                    <li><a href="recettes.html">Mes idées de recettes</a></li>
+                    <li><a href="trucs_astuces.html">Mes astuces</a></li>
+                    </ul>
                 </li>
+                <li><a href="#">À propos</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <h1>Mes recettes</h1>
+        <h1>Mes idées de recettes</h1>
+        <div class="recette">
+            <h2>Courgettes farcies healthy</h2>
+            <img src="images\Recettes\courgettes_healthy_mini.jpg" alt="courgettes farcies" title="Courgettes farcies healthy">
+            <h3>Ingrédients (pour 2 personnes) :</h3>
+            <ul>
+                <li>2 Courgettes</li>
+                <li>200g de poulet</li>
+                <li>200g de sauce tomate</li>
+                <li>1 oignon</li>
+                <li>1 gousse d'ail</li>
+                <li>parmesan</li>
+                <li>origan</li>
+                <li>épices chili</li>
+                <li>sel, poivre</li>
+            </ul>
+        </div>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const recipesContainer = document.querySelector('.recettes-nav');

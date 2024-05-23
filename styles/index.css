@@ -1,5 +1,20 @@
 * {
     margin: 0;
+    padding: 0;
+}
+
+.accueil-photo-mh {
+  height: 15%;
+  width: 15%;
+  margin: 10px;
+  box-shadow: 1px 1px 7px black;
+}
+
+.accueil-photo-salle {
+  height: 50%;
+  width: 50%;
+  margin: auto;
+  display: block;
 }
 
 .accueil-introduction {
@@ -8,27 +23,27 @@
     width: 60%;
     align-items: flex-start;
     margin: auto;
-  }
+}
   
-  .accueil-introduction h1 {
+.accueil-introduction h1 {
     margin-bottom: 15px;
-  }
+}
   
-  .accueil-introduction p {
+.accueil-introduction p {
     margin-bottom: 30px;
     text-align: justify;
     padding: 0 5px 0 5px;
-  }
+}
   
-  .accueil-introduction div {
+.accueil-introduction div {
     padding-right: 80px;
-  }
+}
 
 .section-contact h2 {
     color: #6D071A;
     text-align: center;
     margin-bottom: 50px;
-  }
+}
 
 form {
   display: flex;
