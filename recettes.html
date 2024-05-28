@@ -12,6 +12,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <script src="scripts/recipes-data.js"></script>
     <script src="scripts/display-previews.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (localStorage.getItem('isAuthenticated') !== 'true') {
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -33,22 +40,31 @@
     </header>
     <main>
         <h1>Mes idées de recettes</h1>
-        <div class="recette">
-            <h2>Courgettes farcies healthy</h2>
-            <img src="images\Recettes\courgettes_healthy_mini.jpg" alt="courgettes farcies" title="Courgettes farcies healthy">
-            <h3>Ingrédients (pour 2 personnes) :</h3>
-            <ul>
-                <li>2 Courgettes</li>
-                <li>200g de poulet</li>
-                <li>200g de sauce tomate</li>
-                <li>1 oignon</li>
-                <li>1 gousse d'ail</li>
-                <li>parmesan</li>
-                <li>origan</li>
-                <li>épices chili</li>
-                <li>sel, poivre</li>
-            </ul>
-        </div>
+        <p>
+            Chères pratiquantes, chers pratiquants,<br>
+            vous trouverez sur cette page des idées de recettes équilibrées et faciles à cuisiner,<br>
+            qui vous permettrons d'accompagner les efforts que vous faites à la salle.<br>
+            Régalez-vous !
+        </p>
+        <section>
+            <div class="recette">
+                <h2>Courgettes farcies healthy</h2>
+                <img src="images\Recettes\courgettes_healthy_mini.jpg" alt="courgettes farcies" title="Courgettes farcies healthy">
+                <h3>Ingrédients (pour 2 personnes) :</h3>
+                <ul>
+                    <li>2 Courgettes</li>
+                    <li>200g de poulet</li>
+                    <li>200g de sauce tomate</li>
+                    <li>1 oignon</li>
+                    <li>1 gousse d'ail</li>
+                    <li>parmesan</li>
+                    <li>origan</li>
+                    <li>épices chili</li>
+                    <li>sel, poivre</li>
+                </ul>
+            </div>
+        </section>
+        <br>
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const recipesContainer = document.querySelector('.recettes-nav');

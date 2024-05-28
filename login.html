@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Connexion - Marjory Hazard Coaching</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <img height="50px" width="50px" src="images/hts_logo.png" alt="logo HTS">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li class="menu-deroulant">
+                    <a href="#">Alimentation</a>
+                    <ul class="sous-menu">
+                    <li><a href="recettes.html">Mes idées de recettes</a></li>
+                    <li><a href="trucs_astuces.html">Mes astuces</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">À propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Connexion</h2>
+        <form id="loginForm">
+            <label for="username">Identifiant:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Se connecter</button>
+        </form>
+        <p>
+            Dans le cadre de cette maquette, pour pouvoir accéder aux pages réservées aux membres :</br>
+            Identifiant : ClientVIP </br>
+            Mot de passe : 50Pompes&100burPees
+        </p>
+
+        <script>
+            document.getElementById('loginForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                const username = document.getElementById('username').value;
+                const password = document.getElementById('password').value;
+
+                // Vérifiez les identifiants ici (remplacez par la vérification appropriée)
+                if (username === 'ClientVIP' && password === '50Pompes&100burPees') {
+                    localStorage.setItem('isAuthenticated', 'true');
+                    window.location.href = 'index.html';
+                } else {
+                    alert('Identifiants incorrects');
+                }
+            });
+        </script>
+    </main>
+</body>
+</html>

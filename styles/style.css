@@ -89,11 +89,19 @@ nav > ul > li:hover > a{
     animation: apparitionSousMenu 1s forwards;
 }
 
+.logo {
+    height: 60px;
+    width: 60px;
+    margin: 10px;
+}
+
 h1 {
-    font-size: 3em;
-    font-family: 'Montserrat', sans-serif;
-    color: #6D071A;
-    text-shadow: 1px 1px 7px black;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4em;
+    text-shadow: 1px 1px 5px #5a6643;
+    color: #94946A;;
     padding: 10px;
     text-align: center;
 }
@@ -116,6 +124,11 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
+hr {
+    margin: 10px 200px 10px 200px;
+    position: relative;
+}
+
 nav {
     font-family: 'Montserrat', sans-serif;
 }
@@ -129,6 +142,10 @@ footer {
 display: flex;
 flex-direction: row;
 align-items: center;
+}
+
+footer a {
+    padding : 10px;
 }
 
 a {
