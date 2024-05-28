@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.login-form {
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+
+.login-p {
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
+
+.login-h2 {
+    text-align: center;
+    display: flex;
+    margin: auto;
+}
