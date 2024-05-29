@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+}  
+
+.a-propos-photo-mh {
+    height: 15%;
+    width: 15%;
+    margin: 10px;
+    box-shadow: 1px 1px 7px black;
+}
+
+.a-propos-introduction {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    align-items: flex-start;
+    margin: auto;
+}
+    
+.a-propos-introduction h1 {
+      margin-bottom: 15px;
+}
+    
+.a-propos-introduction p {
+      margin-bottom: 30px;
+      text-align: justify;
+      padding: 0 5px 0 5px;
+}
+    
+.a-propos-introduction div {
+      padding-right: 80px;
+}
+
+p {
+    text-align: justify;
+    padding: 20px;
+    justify-content: center;
+}
