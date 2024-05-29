@@ -16,8 +16,11 @@
                 window.location.href = 'login.html';
             }
         });
+
+        window.addEventListener('beforeunload', function() {
+            localStorage.removeItem('isAuthenticated');
+        });
     </script>
-    
 </head>
 
 <body>

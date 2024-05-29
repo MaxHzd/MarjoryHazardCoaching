@@ -85,6 +85,13 @@
             <img src="images/icone_linkedin.png" alt="Logo LinkedIn" title="LinkedIn" class="icone-footer">
         </a>
     </footer>
+
+    <script>
+        window.addEventListener('beforeunload', function() {
+            localStorage.removeItem('isAuthenticated');
+        });
+    </script>
+    
 </body>
 
 </html>
