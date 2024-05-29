@@ -3,20 +3,79 @@
     padding: 0;
 }
 
-.login-form {
-    text-align: center;
+form {
     display: flex;
+    flex-direction: column;
+    width: 40%;
     margin: auto;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: flex-end; /* Alignement à droite */
+}
+
+.form-row input {
+    margin-left: auto; /* Pousse l'input à droite */
+}
+
+.form-id-pass {
+    width: 50%; /* Ajustez cette valeur selon vos besoins */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+input {
+    border-radius: 3px;
+}
+
+input[type='submit'] {
+    width: 200px;
+    margin: auto;
+    margin-top: 30px;
 }
 
 .login-p {
     text-align: center;
-    display: flex;
-    margin: auto;
 }
 
-.login-h2 {
+.login-form h2 {
     text-align: center;
-    display: flex;
-    margin: auto;
+}
+
+@media screen and (max-width: 996px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    header nav img {
+        margin-bottom: 20px;
+    }
+    
+    header,
+    footer {
+        padding: 20px 20px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    section {
+        padding: 50px 20px 50px 20px;
+    }
+    
+    nav a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
