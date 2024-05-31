@@ -51,17 +51,16 @@
         </section>
 
         <script>
-            document.getElementById('loginForm').addEventListener('submit', function(event) {
+            document.getElementById('login-form').addEventListener('submit', function(event) {
                 event.preventDefault();
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
-
-                // Vérifiez les identifiants ici (remplacez par la vérification appropriée)
-                if (username === 'ClientVIP' && password === '50Pompes&100burPees') {
+                // Vérifiez les identifiants
+                if (username === 'client' && password === 'motdepasse') {
                     sessionStorage.setItem('isAuthenticated', 'true');
-                    window.location.href = 'recettes.html';
+                    window.location.href = 'index.html';
                 } else {
-                    alert('Identifiants incorrects');
+                    alert('Identifiants incorrects.');
                 }
             });
         </script>
