@@ -58,7 +58,7 @@
 
                 // Vérifiez les identifiants ici (remplacez par la vérification appropriée)
                 if (username === 'ClientVIP' && password === '50Pompes&100burPees') {
-                    localStorage.setItem('isAuthenticated', 'true');
+                    sessionStorage.setItem('isAuthenticated', 'true');
                     window.location.href = 'recettes.html';
                 } else {
                     alert('Identifiants incorrects');

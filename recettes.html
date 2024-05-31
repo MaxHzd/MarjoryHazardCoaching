@@ -14,13 +14,13 @@
     <script src="scripts/display-previews.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            if (localStorage.getItem('isAuthenticated') !== 'true') {
+            if (sessionStorage.getItem('isAuthenticated') !== 'true') {
                 window.location.href = 'login.html';
             }
         });
 
         window.addEventListener('beforeunload', function() {
-            localStorage.removeItem('isAuthenticated');
+            sessionStorage.removeItem('isAuthenticated');
         });
     </script>
 </head>
@@ -50,45 +50,9 @@
             qui vous permettrons d'accompagner les efforts que vous faites à la salle.<br>
             Régalez-vous !
         </p>
-        <section>
-            <div class="recette">
-                <h2>Courgettes farcies healthy</h2>
-                <img src="images\Recettes\courgettes_healthy_mini.jpg" alt="courgettes farcies" title="Courgettes farcies healthy">
-                <h3>Ingrédients (pour 2 personnes) :</h3>
-                <ul>
-                    <li>2 Courgettes</li>
-                    <li>200g de poulet</li>
-                    <li>200g de sauce tomate</li>
-                    <li>1 oignon</li>
-                    <li>1 gousse d'ail</li>
-                    <li>parmesan</li>
-                    <li>origan</li>
-                    <li>épices chili</li>
-                    <li>sel, poivre</li>
-                </ul>
-            </div>
+        <section class="recettes-nav">
+            <!-- Les aperçus des recettes seront générés ici -->
         </section>
-        <br>
-        <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const recipesContainer = document.querySelector('.recettes-nav');
-        
-                recipes.forEach(recipe => {
-                    const recipeElement = document.createElement('div');
-                    recipeElement.classList.add('recipe-preview');
-                    recipeElement.innerHTML = `
-                        <img src="${recipe.photo}" alt="${recipe.title}">
-                        <h2>${recipe.title}</h2>
-                    `;
-                    recipeElement.addEventListener('click', () => {
-                        localStorage.setItem('selectedRecipeId', recipe.id);
-                        window.location.href = 'recipes.html';
-                    });
-                    recipesContainer.appendChild(recipeElement);
-                });
-            });
-        </script>
-        
     </main>
     <footer>
         <a target="blank" href="https://facebook.com" class="lien-icone">
