@@ -38,7 +38,7 @@
 
 <body>
     <header>
-        <img height="50px" width="50px" src="images/hts_logo.png" alt="logo HTS">
+        <img height="50px" width="50px" src="images/MHCoaching_Logo.png" alt="logo MH Coaching">
         <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
@@ -53,8 +53,7 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Mes recettes</h1>
+    <main class="recipes-page">
         <script>
             document.addEventListener('DOMContentLoaded', () => {
                 const recipeId = localStorage.getItem('selectedRecipeId');
@@ -62,6 +61,7 @@
         
                 if (recipe) {
                     const mainContainer = document.querySelector('main');
+                    mainContainer.style.backgroundColor = "white";
                     mainContainer.innerHTML = `
                         <h1>${recipe.title}</h1>
                         <img src="${recipe.photo}" alt="${recipe.title}">
@@ -81,13 +81,13 @@
         
     </main>
     <footer>
-        <a target="blank" href="https://facebook.com" class="lien-icone">
+        <a target="blank" href="https://www.facebook.com/profile.php?id=61565078940211&locale=fr_FR" class="lien-icone">
             <img src="images\icone_fb.png" alt="Logo Facebook" title="Facebook" class="icone-footer">
         </a>
-        <a target="blank" href="https://instagram.com" class="lien-icone">
+        <a target="blank" href="https://www.instagram.com/marjoryhazard_coaching/" class="lien-icone">
             <img src="images\icone_instagram.png" alt="Logo Instagram" title="Instagram" class="icone-footer">
         </a>
-        <a target="blank" href="https://linkedin.com" class="lien-icone">
+        <a target="blank" href="https://www.linkedin.com/in/marjoryhazardcoaching/" class="lien-icone">
             <img src="images\icone_linkedin.png" alt="Logo LinkedIn" title="LinkedIn" class="icone-footer">
         </a>
     </footer>
